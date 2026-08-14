@@ -92,6 +92,7 @@ export default function Navbar() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Agendar Cita por WhatsApp"
           sx={{
             py: 1.5,
             bgcolor: "primary.main",
@@ -148,7 +149,7 @@ export default function Navbar() {
                 <Box
                   component="img"
                   src="/logo.jpg"
-                  alt="Protege Tu Psique logo"
+                  alt="Consultorio Psicológico Protege Tu Psique - Carlos Torres"
                   sx={{ height: { xs: 40, md: 48 }, width: "auto" }}
                 />
                 <Typography
@@ -200,6 +201,7 @@ export default function Navbar() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Agendar Cita por WhatsApp"
                   sx={{
                     bgcolor: "primary.main",
                     color: "#FFFFFF",

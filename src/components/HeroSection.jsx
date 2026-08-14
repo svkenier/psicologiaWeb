@@ -93,6 +93,7 @@ export default function HeroSection() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Contactar a Carlos Torres por WhatsApp"
                 sx={{
                   bgcolor: "primary.main",
                   color: "#FFFFFF",
@@ -164,7 +165,10 @@ export default function HeroSection() {
             <Box
               component="img"
               src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=700&q=80"
-              alt="Sesión de terapia clínica"
+              alt="Consultorio de Terapia Psicológica y DBT - Carlos Torres"
+              fetchPriority="high"
+              width="700"
+              height="600"
               sx={{
                 width: "100%",
                 height: "100%",

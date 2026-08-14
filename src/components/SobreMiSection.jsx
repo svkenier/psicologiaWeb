@@ -31,7 +31,10 @@ export default function SobreMiSection() {
             <Box
               component="img"
               src="/foto-ct.JPG"
-              alt="Carlos Torres, Psicólogo Clínico"
+              alt="Consultorio Psicológico Protege Tu Psique - Carlos Torres"
+              loading="lazy"
+              width="600"
+              height="600"
               sx={{
                 width: "100%",
                 height: "auto",

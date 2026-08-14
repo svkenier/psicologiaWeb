@@ -78,6 +78,7 @@ export default function FAQSection() {
                     }}
                   >
                     <Typography
+                      component="h3"
                       sx={{
                         fontWeight: 700,
                         fontSize: "1.25rem",

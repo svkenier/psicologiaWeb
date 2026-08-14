@@ -9,6 +9,7 @@ import EmpresasSection from "./components/EmpresasSection";
 import SobreMiSection from "./components/SobreMiSection";
 import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
+import { Helmet } from "react-helmet-async";
 
 const WHATSAPP_URL = "https://wa.me/584127713052";
 
@@ -16,6 +17,47 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Helmet>
+        <html lang="es-VE" />
+        <title>Protege Tu Psique | Psicólogo Clínico y Terapia DBT</title>
+        <meta name="description" content="Carlos Torres, psicólogo clínico con 7 años de experiencia. Terapia individual, de pareja y bienestar para empresas. Atención online y presencial en Maracaibo." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://protegetupsique.com" />
+        <meta property="og:title" content="Protege Tu Psique | Psicólogo Clínico y Terapia DBT" />
+        <meta property="og:description" content="Carlos Torres, psicólogo clínico con 7 años de experiencia. Terapia individual, de pareja y bienestar para empresas. Atención online y presencial en Maracaibo." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://protegetupsique.com" />
+        <meta property="og:image" content="/foto-ct.JPG" />
+        <meta property="og:locale" content="es_VE" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Physician",
+            "name": "Protege Tu Psique",
+            "image": "https://protegetupsique.com/logo.jpg",
+            "telephone": "+584127713052",
+            "priceRange": "$$",
+            "founder": {
+              "@type": "Person",
+              "name": "Carlos Torres"
+            },
+            "employee": {
+              "@type": "Person",
+              "name": "Carlos Torres"
+            },
+            "description": "Psicología clínica basada en evidencia y consultoría de bienestar organizacional.",
+            "location": {
+              "@type": "Place",
+              "name": "Maracaibo, Zulia, Venezuela."
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "WhatsApp (Atención online y presencial)",
+              "telephone": "+584127713052"
+            }
+          })}
+        </script>
+      </Helmet>
 
       {/* ── NAVBAR ── */}
       <Navbar />

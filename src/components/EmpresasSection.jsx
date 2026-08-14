@@ -90,6 +90,7 @@ export default function EmpresasSection() {
                 href={WHATSAPP_B2B_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Solicitar Propuesta Corporativa por WhatsApp"
                 sx={{
                   bgcolor: "primary.main",
                   color: "#FFFFFF",

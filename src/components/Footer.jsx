@@ -27,7 +27,7 @@ export default function Footer() {
         >
           {/* BRAND */}
           <Box>
-            <Typography variant="h4" sx={{ fontWeight: 900, mb: 2, letterSpacing: "-0.02em" }}>
+            <Typography variant="h4" component="p" sx={{ fontWeight: 900, mb: 2, letterSpacing: "-0.02em" }}>
               Protege Tu Psique.
             </Typography>
             <Typography sx={{ color: "rgba(255,255,255,0.7)", mb: 4, maxWidth: 300, lineHeight: 1.6 }}>

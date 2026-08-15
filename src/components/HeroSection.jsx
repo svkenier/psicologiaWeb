@@ -6,12 +6,13 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "../utils/animations";
+import imgBanner from "../assets/imgBanner.png";
 
-const WHATSAPP_URL = "https://wa.me/584127713052";
+const WHATSAPP_URL = "https://wa.me/584127713052?text=Hola%20Carlos%2C%20visit%C3%A9%20tu%20p%C3%A1gina%20web%20y%20estoy%20interesado%2Fa%20en%20iniciar%20un%20proceso%20de%20terapia.%20%C2%BFMe%20podr%C3%ADas%20brindar%20m%C3%A1s%20informaci%C3%B3n%3F";
 
 const STATS = [
   { value: "7+", label: "Años de experiencia" },
-  { value: "DBT", label: "Formación clínica" },
+  { value: "TCC", label: "Formación clínica" },
   { value: "100+", label: "Pacientes atendidos" },
 ];
 
@@ -23,7 +24,7 @@ export default function HeroSection() {
       sx={{
         bgcolor: "#FFFFFF",
         pt: { xs: 14, md: 20 },
-        pb: { xs: 10, md: 16 },
+        pb: { xs: 4, md: 10 },
       }}
     >
       <Container maxWidth="lg">
@@ -52,7 +53,7 @@ export default function HeroSection() {
                   mb: 4,
                 }}
               >
-                Psicólogo Clínico <Box component="span" sx={{ color: "#7ED9A3", mx: 1 }}>/</Box> Terapia DBT
+                Psicólogo Clínico <Box component="span" sx={{ color: "#7ED9A3", mx: 1 }}>/</Box> Terapia TCC
               </Typography>
             </motion.div>
 
@@ -83,7 +84,7 @@ export default function HeroSection() {
                   mb: 6,
                 }}
               >
-                Terapia clínica basada en evidencia. Resultados reales mediante 
+                Terapia basada en evidencia. Resultados reales mediante 
                 estrategias estructuradas y adaptadas a tu situación particular.
               </Typography>
             </motion.div>
@@ -164,7 +165,7 @@ export default function HeroSection() {
           >
             <Box
               component="img"
-              src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=700&q=80"
+              src={imgBanner}
               alt="Consultorio de Terapia Psicológica y DBT - Carlos Torres"
               fetchPriority="high"
               width="700"

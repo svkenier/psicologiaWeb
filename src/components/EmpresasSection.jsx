@@ -2,7 +2,7 @@ import { Box, Container, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer, viewport } from "../utils/animations";
 
-const WHATSAPP_B2B_URL = "https://wa.me/584127713052?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre%20los%20talleres%20corporativos.";
+const WHATSAPP_B2B_URL = "https://wa.me/584127713052?text=Buen%20d%C3%ADa.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20consultor%C3%ADa%20y%20bienestar%20organizacional%20B2B%20para%20mi%20equipo%20de%20trabajo.";
 
 const TEMAS = [
   "Liderazgo Resiliente y Gestión de Equipos",
@@ -66,7 +66,7 @@ export default function EmpresasSection() {
                   mb: 5,
                 }}
               >
-                Salud mental para organizaciones que lideran.
+                Salud mental para organizaciones.
               </Typography>
             </motion.div>
             <motion.div variants={fadeInUp}>
@@ -80,7 +80,7 @@ export default function EmpresasSection() {
                   maxWidth: 480,
                 }}
               >
-                Diseñamos intervenciones clínicas y talleres especializados para empresas. 
+                Diseñamos intervenciones terapeúticas y talleres especializados para empresas. 
                 Fomentamos entornos de trabajo psicológicamente seguros, previniendo el burnout 
                 y potenciando el rendimiento mediante la gestión emocional basada en evidencia.
               </Typography>

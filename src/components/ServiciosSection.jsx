@@ -11,18 +11,18 @@ const SERVICIOS = [
     id: "terapia-individual",
     title: "Terapia Individual",
     description:
-      "Un espacio terapéutico seguro para trabajar patrones emocionales, creencias limitantes y estrategias de afrontamiento. Enfoque en resultados concretos.",
+      "Un espacio terapéutico seguro para trabajar patrones emocionales, creencias disfuncionales y estrategias de afrontamiento. Enfoque en resultados concretos.",
     features: [
-      "Gestión emocional",
-      "Manejo del estrés y ansiedad",
-      "Autoconocimiento",
+      "Depresión",
+      "Ansiedad",
+      "Duelo",
     ],
   },
   {
     id: "terapia-pareja",
     title: "Terapia de Pareja",
     description:
-      "Mejora la comunicación, resuelve conflictos recurrentes y reconstruye la confianza con herramientas basadas en evidencia clínica.",
+      "Mejora la comunicación, resuelve conflictos recurrentes y reconstruye la confianza con herramientas basadas en evidencias.",
     features: [
       "Comunicación asertiva",
       "Resolución de conflictos",
@@ -31,13 +31,13 @@ const SERVICIOS = [
   },
   {
     id: "psicologia-adolescentes",
-    title: "Psicología Adolescente",
+    title: "Terapia para Adolescentes",
     description:
       "Apoyo especializado para jóvenes que navegan identidad, relaciones sociales o conflictos familiares. Intervención temprana.",
     features: [
-      "Construcción de identidad",
-      "Gestión de conducta",
-      "Apoyo académico y social",
+      "Autoconocimiento",
+      "Gestión de Conducta",
+      "Gestión Emocional",
     ],
   },
 ];

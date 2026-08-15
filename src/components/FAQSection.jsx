@@ -10,7 +10,7 @@ const FAQS = [
   },
   {
     pregunta: "¿Trabajan con seguros médicos?",
-    respuesta: "Actualmente trabajamos por reembolso. Emitimos una factura y un informe clínico que puedes presentar a tu aseguradora para gestionar el reintegro según tu póliza.",
+    respuesta: "Actualmente no trabajamos con seguros médicos ni pólizas de salud. Todas nuestras consultas son de atención particular.",
   },
   {
     pregunta: "¿Cómo funciona la modalidad online?",

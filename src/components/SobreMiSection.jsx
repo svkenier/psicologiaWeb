@@ -9,7 +9,8 @@ export default function SobreMiSection() {
       component="section"
       sx={{
         bgcolor: "#FFFFFF",
-        py: { xs: 12, md: 20 },
+        pt: { xs: 4, md: 12 },
+        pb: { xs: 12, md: 20 },
       }}
     >
       <Container maxWidth="lg">
@@ -28,20 +29,24 @@ export default function SobreMiSection() {
             whileInView="visible"
             viewport={viewport}
           >
-            <Box
-              component="img"
-              src="/foto-ct.JPG"
-              alt="Consultorio Psicológico Protege Tu Psique - Carlos Torres"
-              loading="lazy"
-              width="600"
-              height="600"
-              sx={{
-                width: "100%",
-                height: "auto",
-                display: "block",
-                filter: "grayscale(10%)",
-              }}
-            />
+            <Box sx={{ overflow: "hidden", width: "100%", height: "auto" }}>
+              <Box
+                component="img"
+                src="/foto-ct.JPG"
+                alt="Consultorio Psicológico Protege Tu Psique - Carlos Torres"
+                loading="lazy"
+                width="600"
+                height="600"
+                sx={{
+                  width: "100%",
+                  height: "auto",
+                  display: "block",
+                  filter: "grayscale(10%)",
+                  transform: "scale(1.25)",
+                  transformOrigin: "center 15%",
+                }}
+              />
+            </Box>
           </motion.div>
 
           {/* RIGHT: TEXT */}
@@ -94,7 +99,7 @@ export default function SobreMiSection() {
                 }}
               >
                 Soy Psicólogo Clínico enfocado en terapias basadas en evidencia, 
-                especialmente en la <strong>Terapia Dialéctica Conductual (DBT)</strong>. 
+                especialmente en la <strong>Terapia Cognitivo Conductual (TCC)</strong>. 
                 Mi objetivo es proporcionar un espacio donde la ciencia psicológica y 
                 la empatía convergen para generar cambios medibles y sostenibles en la vida de mis pacientes.
               </Typography>
@@ -119,13 +124,15 @@ export default function SobreMiSection() {
 
             <motion.div variants={fadeInUp}>
                 <Box sx={{ borderTop: "1px solid", borderColor: "divider", pt: 5, display: "flex", gap: { xs: 4, md: 8 } }}>
-                    <Box>
-                        <Typography sx={{ color: "primary.main", fontWeight: 900, fontSize: "1.5rem", mb: 0.5 }}>FPV</Typography>
-                        <Typography sx={{ color: "text.secondary", fontWeight: 600, fontSize: "0.75rem", letterSpacing: "0.05em", textTransform: "uppercase" }}>Colegiado Activo</Typography>
+                    <Box sx={{ borderLeft: "2px solid", borderColor: "divider", pl: 2.5 }}>
+                        <Typography sx={{ color: "primary.main", fontWeight: 800, fontSize: "1.3rem", lineHeight: 1, mb: 0.5 }}>FPV</Typography>
+                        <Typography sx={{ color: "text.primary", fontWeight: 700, fontSize: "1rem", mb: 0.5 }}>Nº 16.605</Typography>
+                        <Typography sx={{ color: "text.secondary", fontWeight: 600, fontSize: "0.7rem", letterSpacing: "0.05em", textTransform: "uppercase" }}>Colegiado Activo</Typography>
                     </Box>
-                    <Box>
-                        <Typography sx={{ color: "primary.main", fontWeight: 900, fontSize: "1.5rem", mb: 0.5 }}>UCV</Typography>
-                        <Typography sx={{ color: "text.secondary", fontWeight: 600, fontSize: "0.75rem", letterSpacing: "0.05em", textTransform: "uppercase" }}>Egresado</Typography>
+                    <Box sx={{ borderLeft: "2px solid", borderColor: "divider", pl: 2.5 }}>
+                        <Typography sx={{ color: "primary.main", fontWeight: 800, fontSize: "1.3rem", lineHeight: 1, mb: 0.5 }}>URU</Typography>
+                        <Typography sx={{ color: "text.primary", fontWeight: 700, fontSize: "1rem", mb: 0.5 }}>Año 2019</Typography>
+                        <Typography sx={{ color: "text.secondary", fontWeight: 600, fontSize: "0.7rem", letterSpacing: "0.05em", textTransform: "uppercase" }}>Egresado</Typography>
                     </Box>
                 </Box>
             </motion.div>

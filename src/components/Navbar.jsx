@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -26,7 +27,7 @@ const NAV_LINKS = [
   { name: "FAQ", href: "#faq" },
 ];
 
-const WHATSAPP_URL = "https://wa.me/584127713052";
+const WHATSAPP_URL = "https://wa.me/584127713052?text=Hola%20Carlos%2C%20visit%C3%A9%20tu%20p%C3%A1gina%20web%20y%20estoy%20interesado%2Fa%20en%20iniciar%20un%20proceso%20de%20terapia.%20%C2%BFMe%20podr%C3%ADas%20brindar%20m%C3%A1s%20informaci%C3%B3n%3F";
 
 function HideOnScroll({ children }) {
   const trigger = useScrollTrigger();
@@ -40,9 +41,24 @@ function HideOnScroll({ children }) {
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    if (mobileOpen) setMobileOpen(false);
+    
+    if (location.pathname !== "/") {
+      navigate("/" + href);
+    } else {
+      const targetId = href.replace("#", "");
+      const elem = document.getElementById(targetId);
+      if (elem) elem.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   useEffect(() => {
@@ -70,16 +86,15 @@ export default function Navbar() {
             <ListItemButton
               component="a"
               href={item.href}
-              onClick={handleDrawerToggle}
+              onClick={(e) => handleNavClick(e, item.href)}
               sx={{ borderRadius: 0 }}
             >
               <ListItemText 
-                primary={item.name} 
-                primaryTypographyProps={{ 
-                  fontWeight: 600, 
-                  color: "text.primary",
-                  fontSize: "1.1rem"
-                }} 
+                primary={
+                  <Typography sx={{ fontWeight: 600, color: "text.primary", fontSize: "1.1rem" }}>
+                    {item.name}
+                  </Typography>
+                }
               />
             </ListItemButton>
           </ListItem>
@@ -136,7 +151,11 @@ export default function Navbar() {
                 href="#hero"
                 onClick={(e) => {
                   e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  if (location.pathname !== "/") {
+                    navigate("/");
+                  } else {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
                 }}
                 sx={{
                   display: "flex",
@@ -181,6 +200,7 @@ export default function Navbar() {
                     key={item.name}
                     component="a"
                     href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
                     sx={{
                       color: "text.primary",
                       textDecoration: "none",
@@ -240,7 +260,7 @@ export default function Navbar() {
         open={mobileOpen}
         onClose={handleDrawerToggle}
         ModalProps={{ keepMounted: true }}
-        PaperProps={{ sx: { bgcolor: "#FFFFFF", width: 280 } }}
+        sx={{ "& .MuiDrawer-paper": { bgcolor: "#FFFFFF", width: 280 } }}
       >
         {drawer}
       </Drawer>

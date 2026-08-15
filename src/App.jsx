@@ -9,11 +9,29 @@ import EmpresasSection from "./components/EmpresasSection";
 import SobreMiSection from "./components/SobreMiSection";
 import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
+import PoliticaLegal from "./pages/PoliticaLegal";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { Routes, Route, useLocation } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
-const WHATSAPP_URL = "https://wa.me/584127713052";
+const WHATSAPP_URL = "https://wa.me/584127713052?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20hacer%20una%20consulta%2C%20por%20favor.";
 
 export default function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/" && location.hash) {
+      setTimeout(() => {
+        const id = location.hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -64,12 +82,20 @@ export default function App() {
 
       {/* ── CONTENIDO PRINCIPAL ── */}
       <Box component="main">
-        <HeroSection />
-        <SobreMiSection />
-        <Divider sx={{ borderBottomWidth: 4, borderColor: "#7ED9A3", opacity: 0.2 }} />
-        <ServiciosSection />
-        <EmpresasSection />
-        <FAQSection />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <HeroSection />
+              <SobreMiSection />
+              <Divider sx={{ borderBottomWidth: 4, borderColor: "#7ED9A3", opacity: 0.2 }} />
+              <ServiciosSection />
+              <EmpresasSection />
+              <FAQSection />
+            </>
+          } />
+          <Route path="/politica-privacidad" element={<PoliticaLegal />} />
+        </Routes>
       </Box>
 
       {/* ── FOOTER ── */}

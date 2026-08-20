@@ -6,7 +6,7 @@ import { fadeInUp, staggerContainer, viewport } from "../utils/animations";
 const FAQS = [
   {
     pregunta: "¿Cuánto dura una sesión?",
-    respuesta: "Cada sesión clínica tiene una duración de 50 minutos. Este es el tiempo estándar internacional que permite un desarrollo terapéutico óptimo sin fatiga cognitiva.",
+    respuesta: "Cada sesión tiene una duración de 50 minutos. Este es el tiempo estándar internacional que permite un desarrollo terapéutico óptimo sin fatiga cognitiva.",
   },
   {
     pregunta: "¿Trabajan con seguros médicos?",
